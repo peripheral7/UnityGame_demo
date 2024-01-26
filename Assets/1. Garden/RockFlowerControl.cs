@@ -6,12 +6,17 @@ public class RockFlowerControl : MonoBehaviour
 {
     private GameObject rockFlowerObject;
 
-    // 직접 드래그해서 지정해줘야 함!
     public GameObject RockObject;
-    private bool isRockFlowerActive = false;
+    public bool isRockFlowerActive = false;
+
+    // Static reference to the instance of RockFlowerControl
+    public static RockFlowerControl Instance { get; private set; }
 
     void Start()
     {
+        // Set the static instance reference
+        Instance = this;
+
         rockFlowerObject = transform.Find("RockFlower").gameObject;
         DeactivateRockFlower();
     }
@@ -43,8 +48,7 @@ public class RockFlowerControl : MonoBehaviour
         }
         else
         {
-            return;
-            // DeactivateRockFlower();
+            DeactivateRockFlower();
         }
     }
 
