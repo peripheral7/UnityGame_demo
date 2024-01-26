@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 53c3991db41ac9a4b8f689c18e3f7e4b
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245997
+  packageName: Mimic prototype
+  packageVersion: 1.0
+  assetPath: Assets/Mimic/DemoScene/DemoScene.unity
+  uploadId: 560288

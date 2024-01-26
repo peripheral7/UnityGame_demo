@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CampfireController : MonoBehaviour
+public class CampfireControl : MonoBehaviour
 {
     private GameObject fireObject;
     public GameObject CampFireObject;
-    private bool isFireActive = false;
+    public bool isFireActive = false;
+
+    // Static reference to the instance of CampfireControl
+    public static CampfireControl Instance { get; private set; }
 
     void Start()
     {
+        // Set the static instance reference
+        Instance = this;
+
         fireObject = transform.Find("Fire").gameObject;
         DeactivateFire();
     }
